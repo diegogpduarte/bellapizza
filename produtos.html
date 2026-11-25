@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Bella Piazza</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="cabecalho"></div>
+    <main>
+        <h1>Cardápio</h1>
+        <div class="filtros">
+            <button onclick="filtrarCategoria('Todos')">Todos</button>
+            <button onclick="filtrarCategoria('Pizzas')">Pizzas</button>
+            <button onclick="filtrarCategoria('Doces')">Doces</button>
+            <button onclick="filtrarCategoria('Bebidas')">Bebidas</button>
+            <button onclick="filtrarCategoria('Entradas')">Entradas</button>
+        </div>
+        <div class="lista" id="listaProdutos"></div>
+    </main>
+    <div id="rodape"></div>
+    <script src="script.js"></script>
+</body>
+</html>

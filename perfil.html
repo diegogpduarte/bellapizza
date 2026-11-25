@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu perfil - Bella Piazza</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="cabecalho"></div>
+    <main>
+        <h1>Meu perfil</h1>
+        <div id="areaPerfil">
+            <form class="formulario" onsubmit="salvarPerfil(); return false;">
+                <label>Nome completo</label>
+                <input type="text" id="perfNome" maxlength="60" oninput="this.value = this.value.replace(/[^A-Za-zÀ-ÿ ]/g, '')">
+                <label>E-mail</label>
+                <input type="text" id="perfEmail" disabled>
+                <label>CPF</label>
+                <input type="text" id="perfCpf" disabled>
+                <label>Telefone</label>
+                <input type="text" id="perfTelefone" maxlength="15" oninput="this.value = mascaraTelefone(this.value)">
+                <label>CEP</label>
+                <input type="text" id="perfCep" maxlength="9" oninput="this.value = mascaraCEP(this.value)">
+                <label>Endereço</label>
+                <input type="text" id="perfEndereco" maxlength="80">
+                <label>Número</label>
+                <input type="text" id="perfNumero" maxlength="6" oninput="this.value = this.value.replace(/\D/g, '')">
+                <p class="erro" id="erroPerfil"></p>
+                <button type="submit">Salvar alterações</button>
+                <button type="button" class="cinza" onclick="excluirConta()">Excluir minha conta</button>
+            </form>
+        </div>
+    </main>
+    <div id="rodape"></div>
+    <script src="script.js"></script>
+</body>
+</html>
